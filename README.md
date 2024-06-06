@@ -10,4 +10,4 @@ Welcome to our Resume Builder Website! Our website allows users to easily create
 Here are some screenshots of the project to give you an idea of its features and functionality:
 
 ###### Home Page
-![Home Page](C:\Users\bharg\OneDrive\Pictures\Screenshots\Screenshot 2024-06-06 121840.png)
+![Home Page](https://github.com/Bhargavasumanth/Resume_Builder/assets/115168713/434d729d-83c7-4ba1-97ab-056b07341c66)
