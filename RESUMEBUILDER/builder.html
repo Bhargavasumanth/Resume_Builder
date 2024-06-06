@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="resumeBuilder.css">
+  <script src="https://unpkg.com/js-html2pdf@latest/lib/html2pdf.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+    <hr width="100%" color="#0f9690" style="margin: 5px;">
+    <form id="resumeForm">
+      <div class="section">
+        <h2>Personal Information</h2>
+        <input type="text" name="fullName" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <input type="text" name="linkedinUrl" placeholder="Enter Your linkedin Url" required>
+        <input type="text" name="githubUrl" placeholder="Enter Your GitHub Repository Url" required>
+        <!-- add more info fields according to need -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Education</h2>
+        <input type="text" name="educationTitle" placeholder="Degree" required>
+        <input type="text" name="educationInstitution" placeholder="Institution" required>
+        <input type="date" name="educationDate" placeholder="Date" required>
+        <br>
+        <br>
+        <input type="text" name="educationTitle" placeholder="Intermediate" required>
+        <input type="text" name="educationInstitution" placeholder="Institution" required>
+        <input type="date" name="educationDate" placeholder="Date" required>
+        <br>
+        <br>
+        <input type="text" name="educationTitle" placeholder="Secondary School" required>
+        <input type="text" name="educationInstitution" placeholder="Institution" required>
+        <input type="date" name="educationDate" placeholder="Date" required>
+        <!-- add more education fields -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section" >
+        <h2>Work Experience</h2>
+        <input type="text" name="workTitle" placeholder="Job Title" >
+        <input type="text" name="workCompany" placeholder="Company" >
+        <span class="jobJoin">Starting Date:</span><input type="date" name="JoiningDate"><br>
+        <span class="jobJoin">Leaving Date:</span><input type="date" name="resignDate"><br>
+        <textarea name="workDescription" placeholder="Job Description" ></textarea>
+        <!-- Add more work experience fields -->
+        <br>
+        <br>
+        <input type="text" name="workTitle" placeholder="Job Title" >
+        <input type="text" name="workCompany" placeholder="Company" >
+        <span class="jobJoin">Starting Date:</span><input type="date" name="JoiningDate" ><br>
+        <span class="jobJoin">Leaving Date:</span><input type="date" name="resignDate" ><br>
+        <textarea name="workDescription" placeholder="Job Description" ></textarea>
+        <!-- Add more work experience fields -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Internships and Fields</h2>
+        <form>
+            <!-- Form inputs for Section 4 -->
+            <input style="font-weight: bold;" type="text" name="internshipFieldName" placeholder="Internship Field Name" required><br>
+            <input type="text" name="orgName" placeholder="Company or Organization Name Where you done this Internship"
+                required><br>
+            <span class="internDate">Starting Date:</span><input type="date" name="passingDate" required><br>
+            <span class="internDate">Finishing Date:</span><input type="date" name="aggregateMark-s" required><br>
+            <br>
+            <br>
+            <input style="font-weight: bold;" type="text" name="internshipFieldName" placeholder="Internship Name" required><br>
+            <input type="text" name="orgName" placeholder="Company or Organization Name Where you done this Internship"
+                required><br>
+            <span class="internDate">Starting Date:</span><input type="date" name="passingDate" required><br>
+            <span class="internDate">Finishing Date:</span><input type="date" name="aggregateMarks" required><br>
+        </form>
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Projects</h2>
+        <input style="font-weight: bold;" type="text" name="projectTitle" placeholder="Project Title" required>
+        <input type="text" name="projectDescription" placeholder="Project Description" required>
+        <!-- Add more project fields as needed -->
+        <br>
+        <br>
+        <input style="font-weight: bold;" type="text" name="projectTitle" placeholder="Project Title" required>
+        <input type="text" name="projectDescription" placeholder="Project Description" required>
+        <!-- Add more project fields as needed -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Certifications</h2>
+        <input type="text" name="Certificate" placeholder="Certificate" required>
+        <input type="text" name="Certificate" placeholder=Certificate" required>
+        <input type="text" name="Certificate" placeholder="Certificate" required>
+        <input type="text" name="Certificate" placeholder="Certificate">
+        <input type="text" name="Certificate" placeholder="Certificate">
+        <!-- Add more skill fields as needed -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Skills</h2>
+        <input type="text" name="skill" placeholder="Skill" required>
+        <input type="text" name="skill" placeholder="Skill" required>
+        <input type="text" name="skill" placeholder="Skill" required>
+        <input type="text" name="skill" placeholder="Skill" required>
+        <input type="text" name="skill" placeholder="Skill" required>
+        <!-- Add more skill fields as needed -->
+      </div>
+      <hr>
+      <hr>
+      <br>
+      <div class="section">
+        <h2>Languages Known</h2>
+        <input type="text" name="language" placeholder="Language" required>
+        <input type="text" name="language" placeholder="Language" required>
+
+        <!-- Add more skill fields as needed -->
+      </div>
+      
+  
+      <button class="generate" type="submit">Generate Resume</button>
+
+      <!--resume image identity starts -->
+      <form>
+        <label class="photo-label"> Select Profile Photo</label>
+        <input id="img-field" type="file" class="form-control">
+      </form>
+
+      <!-- resume image identity  ends -->
+
+    </form>
+
+    <!-- for previewing the resume part start -->
+    <div id="preview" class="section">
+      <button class="button" onClick="download()">Download PDF</button>
+      <h2>Preview</h2>
+      <div id="previewContent">
+
+      </div>
+    </div>
+  </div><br><br>
+  <!--for previewing the resume part  end-->
+
+  <!-- connect html file to javascript file-->
+  <script src="resumeBuilder.js"></script>
+
+</body>
+
+</html>
