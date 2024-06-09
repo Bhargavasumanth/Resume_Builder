@@ -1,7 +1,7 @@
 # Resume Builder
 Welcome to our Resume Builder Website! Our website allows users to easily create professional resumes.
 
-######Video Tutorial of Web Apllication 
+###### Video Tutorial of Web Apllication 
 https://github.com/Bhargavasumanth/Resume_Builder/assets/115168713/dca6a3d9-f9a7-4076-b92d-a45767d2f14f
 
 ## Features
