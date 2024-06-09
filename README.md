@@ -22,7 +22,8 @@ Here are some screenshots of the project to give you an idea of its features and
 ![Sign Up Form](https://github.com/Bhargavasumanth/Resume_Builder/assets/115168713/001f8617-03c7-47e2-8ffe-0dd1be1b9718)
 
 ### Built With
-- HTML
+- HTML5
 - CSS
 - JAVASCRIPT
+- Bootstap Framework
 
